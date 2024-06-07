@@ -1,5 +1,6 @@
 package com.bank.backend.domain.usuario;
 
+import com.bank.backend.dtos.UsuarioDTO;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -30,4 +31,13 @@ public class Usuario {
     @Enumerated(EnumType.STRING)
     private TipoUsuario tipo;
 
+    public Usuario(UsuarioDTO dados) {
+        this.setNome(dados.nome());
+        this.setSobrenome(dados.sobrenome());
+        this.setDocumento(dados.documento());
+        this.setEmail(dados.email());
+        this.setSenha(dados.senha());
+        this.setSaldo(dados.saldo());
+        this.setTipo(dados.tipo());
+    }
 }
