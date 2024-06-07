@@ -4,11 +4,11 @@ import com.bank.backend.domain.usuario.Usuario;
 import jakarta.persistence.*;
 
 import java.math.BigDecimal;
-import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 @Entity(name = "transacao")
-public class transacao {
+@Table(name = "historico_transacao")
+public class HistoricoTransacao {
 
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
