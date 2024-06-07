@@ -1,7 +1,7 @@
 package com.bank.backend.domain.transacao;
 
+import com.bank.backend.domain.usuario.Usuario;
 import jakarta.persistence.*;
-import org.apache.catalina.User;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;
@@ -16,13 +16,11 @@ public class transacao {
     private BigDecimal valor;
 
     @ManyToOne
-    @Column(name = "remetente_id")
-    private User remetente;
+    @JoinColumn(name = "remetente_id")
+    private Usuario remetente;
     @ManyToOne
-    @Column(name = "destinatario_id")
-    private User destinatario;
-
-    @Column(name = "data_hora")
+    @JoinColumn(name = "destinatario_id")
+    private Usuario destinatario;
     private LocalDateTime dataHora;
 
 }

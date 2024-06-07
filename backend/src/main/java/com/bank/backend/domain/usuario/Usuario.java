@@ -11,7 +11,7 @@ import java.math.BigDecimal;
 @AllArgsConstructor
 @NoArgsConstructor
 @EqualsAndHashCode(of = "id")
-public class usuario {
+public class Usuario {
 
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
